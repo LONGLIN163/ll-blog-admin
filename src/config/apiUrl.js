@@ -1,7 +1,7 @@
 
 // development url : http://127.0.0.1:7001/admin/
-let ipUrl="http://127.0.0.1:8081/admin/";
-//let ipUrl="http://node-express-env.eba-5squvtpz.us-east-2.elasticbeanstalk.com/admin/";
+//let ipUrl="http://127.0.0.1:8081/admin/";
+let ipUrl="http://node-express-env.eba-5squvtpz.us-east-2.elasticbeanstalk.com/admin/";
 
 let servicePath = {
     checkLogin:ipUrl + 'checkLogin' ,  //  apiurl-check userName and pwd
