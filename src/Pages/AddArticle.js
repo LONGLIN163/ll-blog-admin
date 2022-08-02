@@ -17,7 +17,6 @@ const AddArticle = (props) => {
     const [introducemd,setIntroducemd] = useState()            //edit markdown type introduce here
     const [introducehtml, setIntroducehtml] = useState('preview...') //marked introduce show here
     const [showDate,setShowDate] = useState()   
-    const [updateDate,setUpdateDate] = useState() 
     const [typeInfo ,setTypeInfo] = useState([]) // article type info 
     const [selectedType,setSelectType] = useState("select a type") 
 
@@ -96,7 +95,6 @@ const AddArticle = (props) => {
             message.error('Publish date can not be empty!')
             return false
         }
-        //message.success('Congrat, validation passes!')
         let dataProps={}  // collect all info
         dataProps.type_id = selectedType 
         dataProps.title = articleTitle
@@ -130,7 +128,6 @@ const AddArticle = (props) => {
                 url:servicePath.updateArticle,
                 header:{ 'Access-Control-Allow-Origin':'*' },
                 data:dataProps,
-                //withCredentials: true
             }).then(
                 res=>{       
                     if(res.data.isSuccess){
@@ -145,7 +142,6 @@ const AddArticle = (props) => {
 
     const getArticleById=(id)=>{
         axios(servicePath.getArticleById+id,{
-            //withCredentials:true,
             header:{ 'Access-Control-Allow-Origin':'*' }
         }).then(
             (res) => {

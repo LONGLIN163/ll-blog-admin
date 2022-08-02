@@ -10,8 +10,6 @@ import axios from "axios"
 
 const Login = (props) => {
 
-    //console.log("Loin---props",props)
-
     const [userName,setUserName] = useState('');
     const [password,setPassword] = useState('');
     const [isLoading,setIsLoading] = useState(false);
@@ -41,10 +39,9 @@ const Login = (props) => {
             method:"post",
             url:servicePath.checkLogin,
             data:dataProps,
-            //withCredentials:true // front and back share the same session
+            header:{ 'Access-Control-Allow-Origin':'*' }
         }).then(
             (res) => {
-                console.log("Login---res---",res)
                 setIsLoading(false)
                 if(res.data.data==="login success"){
                     localStorage.setItem('openId',res.data.openId)
@@ -64,7 +61,7 @@ const Login = (props) => {
         <div className="login-div">
 
             <Spin tip="Loading..." spinning={isLoading}>
-                <Card title="Login page here" bordered={true} style={{ width: 400 }} >
+                <Card title="Login page here..." bordered={true} style={{ width: 400 }} >
                     <Input
                         id="userName"
                         size="large"

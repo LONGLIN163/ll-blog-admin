@@ -15,11 +15,9 @@ const ArticleList = (props) => {
           method:"get",
           url:servicePath.getArticleList,
           header:{ 'Access-Control-Allow-Origin':'*' },
-          //withCredentials:true // front and back share the same session
       })
       .then(
           (res) => {
-              console.log("ArticleList---getList--->"+res.data.data)
               setList(res.data.data)
           }
       )
@@ -66,9 +64,6 @@ const ArticleList = (props) => {
                 <Col span={3}>
                     <b>Publish Date</b>
                 </Col>
-                {/* <Col span={3}>
-                    <b>Chapers</b>
-                </Col> */}
                 <Col span={3}>
                     <b>Views</b>
                 </Col>
@@ -91,9 +86,6 @@ const ArticleList = (props) => {
                     <Col span={3}>
                         {item.addTime}
                     </Col>
-                    {/* <Col span={3}>
-                        <span>{item.part_count}</span> chapters
-                    </Col> */}
                     <Col span={3}>
                       {item.view_count}
                     </Col>

@@ -1,7 +1,5 @@
 
-// development url : http://127.0.0.1:7001/admin/
-//let ipUrl="http://127.0.0.1:8081/admin/";
-let ipUrl="https://node-express-env.eba-5squvtpz.us-east-2.elasticbeanstalk.com/admin/";
+let ipUrl="https://project-blog-service.herokuapp.com/admin/";
 
 let servicePath = {
     checkLogin:ipUrl + 'checkLogin' ,  //  apiurl-check userName and pwd

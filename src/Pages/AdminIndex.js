@@ -1,6 +1,5 @@
 import { Layout, Menu, Breadcrumb } from 'antd';
 import {
-  DesktopOutlined,
   DashboardOutlined,
   SettingOutlined,
   UserOutlined,
