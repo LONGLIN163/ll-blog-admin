@@ -1,5 +1,7 @@
 
-let ipUrl="https://project-blog-service.herokuapp.com/admin/";
+//let ipUrl="https://tikitikihot.com/admin/";
+let ipUrl="http://localhost:8080/admin/";
+
 
 let servicePath = {
     checkLogin:ipUrl + 'checkLogin' ,  //  apiurl-check userName and pwd
